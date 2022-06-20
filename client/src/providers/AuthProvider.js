@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import axios from "axios"
 
 export const AuthContext = React.createContext()
 
@@ -17,7 +18,7 @@ const AuthProvider = ({ children }) => {
     }
   }
 
-  const logout = () => {
+  const logout = async () => {
     try {
       await axios.delete('/api/auth/sign_out')
       setUser(null)
@@ -28,7 +29,7 @@ const AuthProvider = ({ children }) => {
     }
   }
 
-  const register = (user) => {
+  const register = async (user) => {
     try {
       let res = await axios.delete('/api/auth/', user)
       setUser(res.data.data)
