@@ -8,6 +8,7 @@ import NoMatch from './components/shared/NoMatch'
 import FetchUser from './components/auth/FetchUser';
 import reset from "styled-reset"
 import {createGlobalStyle} from "styled-components"
+import StyledComponentsDemo from './demos/StyledComponentsDemo';
 
 const GlobalStyle = createGlobalStyle`
   ${reset}`
@@ -24,6 +25,7 @@ function App() {
           <Route path='/' element={<Home />} />
           <Route path='/login' element={<Login />} />
           <Route path='/register' element={<Register />} />
+          <Route path='/demo' element={<StyledComponentsDemo />} />
           <Route path='/*' element={<NoMatch />} />
         </Routes>
         </FetchUser>
