@@ -6,10 +6,17 @@ import Login from './components/auth/Login'
 import Register from './components/auth/Register'
 import NoMatch from './components/shared/NoMatch'
 import FetchUser from './components/auth/FetchUser';
+import reset from "styled-reset"
+import {createGlobalStyle} from "styled-components"
+
+const GlobalStyle = createGlobalStyle`
+  ${reset}`
+  ;
 
 function App() {
   return (
     <>
+    <GlobalStyle />
       <Navbar />
       <>
       <FetchUser>
