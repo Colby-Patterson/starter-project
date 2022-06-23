@@ -20,7 +20,7 @@ function App() {
     <GlobalStyle />
       <Navbar />
       <>
-      <FetchUser>
+      {/* <FetchUser> */}
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/login' element={<Login />} />
@@ -28,7 +28,7 @@ function App() {
           <Route path='/demo' element={<StyledComponentsDemo />} />
           <Route path='/*' element={<NoMatch />} />
         </Routes>
-        </FetchUser>
+        {/* </FetchUser> */}
       </>
     </>
   );
